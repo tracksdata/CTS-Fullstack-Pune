@@ -1,0 +1,4 @@
+1. Static data is sharable to all the object in the class
+2. Non static data is only available to particular object
+3. 
+
