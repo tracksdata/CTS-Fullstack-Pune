@@ -1,0 +1,19 @@
+import java.io.*;
+class FileOutputStDemo 
+{
+	public static void main(String[] args) throws Exception
+	{
+		String source=" Limca Just Take it Easy\n"+" Thump-up I want My Thunder\n"
+				+" 7 up Keep it Cool\n"+" Friends are more But Real Friends are Rare";
+		byte buff[]=source.getBytes();
+		OutputStream f0=new FileOutputStream("file1.txt");
+		for(int i=0;i<buff.length;i+=2)
+		{
+			f0.write(buff[i]);
+		}
+		f0.close();
+		OutputStream f1=new FileOutputStream("file2.txt");
+		f1.write(buff);
+		f1.close();
+	}
+}

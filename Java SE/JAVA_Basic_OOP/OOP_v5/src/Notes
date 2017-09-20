@@ -1,0 +1,88 @@
+
+
+Inheritance:
+------------
+
+
+ why we need?
+ 
+   
+    --> Re-use common state and behav on specialized classes ( imp ).
+    
+    --> Extending current system without any complexity.
+    
+    --> Adding new properties and behav to existing Objects
+    
+    --> To bring Runtime-Polymorphism on Objects.-->cant predict obj behav at compile time.    
+    
+    
+    Types of Inheritace:
+    ---------------------
+    
+    
+    a. single-level ( A <--- B )
+    b. Multi-level  ( A <--- B <---- C )
+    c. Multiple     ( A,B <--- C ) ( Interfaces )
+    
+    
+    In Java
+    --------
+    
+    a. Class-Level Inheritance
+    b. Interface-Level Inheritance-->Mutiple inheritance
+    
+    
+    ----------------------------------------------
+    
+    terms:
+    ------
+    
+    parent / super / Base / generalized
+    
+    child / sub / derived / specilized class  
+    
+    
+    ---------------------------------------------
+
+    
+     Notes:
+     -------
+     
+     
+     --> Every sub-class constructor first line is
+         'super()', this will invoke(call) its super class's
+         default constructor.
+         
+     --> To initialize super class's private obj var,
+         pass the params through super() from
+         sub-class constructor.
+                  
+     --> If super class dose not have default cons, then sub-class
+         cons must pass the params with super() line.
+         
+             
+    ---------------------------------------------     
+    
+    --> In inheritance, cons invocation is upward direction
+                        exe is downward direction.
+    
+  ----------------------------------------------------------
+    
+    'super' keyword
+    ---------------
+    
+    use:
+    
+    --> To invoke super class's cons with params 
+        from sub-class cons.   
+        
+    --> To access super class member, 
+       when it is overrided in sub-class                            
+     
+  ---------------------------------------------------------   
+     
+     
+     
+    
+    
+    
