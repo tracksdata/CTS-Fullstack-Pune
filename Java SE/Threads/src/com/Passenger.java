@@ -22,7 +22,7 @@ class Reservation extends Thread {
 		String tname = Thread.currentThread().getName();
 		System.out.println("Number Available Seats are " + noOfSeats);
 
-		synchronized (this) {
+		synchronized (Reservation.class) {
 			
 		}
 		//-----
