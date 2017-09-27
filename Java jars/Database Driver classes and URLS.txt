@@ -1,0 +1,15 @@
+Oracle:
+Driver class: oracle.jdbc.OracleDriver
+URL:"jdbc:oracle:thin:@localhost:1521:orcl","scott","tiger"
+
+MySQL
+------
+Driver class: com.mysql.jdbc.Driver
+URL: "jdbc:mysql://localhost:1521/test","root","root"
+
+MS-SQL Server
+-------------
+Driver class: com.microsoft.sqlserver.jdbc.SQLServerDriver
+URL: jdbc:sqlserver://localhost:1433;instance=SPR;DatabaseName=LCMS;integratedSecurity=false","praveen","praveen"
+
+integratedSecurity=false means SQL Authuntication, true means windows authontication
