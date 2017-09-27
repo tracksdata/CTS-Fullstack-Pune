@@ -28,8 +28,10 @@ public class App1 {
 			Statement stmt = con.createStatement();
 			String qry = "insert into product values('P9090','My Pen',12.45)";
 			int res = stmt.executeUpdate(qry);
-			System.out.println(res + " statemnt(s) executed");
-
+			if (res != 0)
+				System.out.println(res + " statemnt(s) executed");
+			else
+				System.out.println("-- Issue with DB");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
