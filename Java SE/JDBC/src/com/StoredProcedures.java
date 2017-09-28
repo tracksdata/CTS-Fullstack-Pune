@@ -208,11 +208,22 @@ public class StoredProcedures {
 				END; 
 				/ 
 				 */
+				
+				// MYSQL
+				/*CREATE  FUNCTION totalEmps()
+				RETURNS INT 
+   				
+					BEGIN 
+					 DECLARE total INT;
+   				SELECT count(*) into total FROM product; 
+    
+   				RETURN total; 
+				END;*/
 				public void demo6() {
 
 					Connection con = null;
 					try {
-						con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","scott","tiger");
+						con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root","root");
 
 						CallableStatement cs = con.prepareCall("{? = call totalEmps()}");
 
@@ -221,7 +232,7 @@ public class StoredProcedures {
 						
 						cs.execute();
 						int res = cs.getInt(1);
-						System.out.println("Result: " + res);
+						System.out.println("Total Products: " + res);
 
 					} catch (Exception e) {
 						e.printStackTrace();
@@ -249,22 +260,37 @@ public class StoredProcedures {
 
                 / 
 				 */
+				// MYSQL
+				/*CREATE FUNCTION findMax(x int,y int)  
+				RETURNS INT 
 				
+
+				BEGIN 
+				DECLARE
+					z INT; 
+   				IF x > y THEN 
+      			set z= x; 
+   				ELSE 
+      			set z= y; 
+   				END IF;  
+   				RETURN z; 
+				END; 
+				*/
 				public void demo7() {
 
 					Connection con = null;
 					try {
-						con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","scott","tiger");
+						con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root","root");
 
 						CallableStatement cs = con.prepareCall("{? = call findMax(?,?)}");
 
-						cs.setInt(2, 100);
+						cs.setInt(2, 1000);
 						cs.setInt(3, 765);
 						
 						cs.registerOutParameter(1, Types.INTEGER);
 						
 						cs.execute();
-						String res = cs.getString(1);
+						int res = cs.getInt(1);
 						System.out.println("Max Value is : " + res);
 
 					} catch (Exception e) {
@@ -275,6 +301,12 @@ public class StoredProcedures {
 
 				}	
 				
+				// MySQL
+				/* create PROCEDURE squareNum1(INOUT x INT)
+					BEGIN  
+						set x=x*x;
+					END;
+				*/
 				public void demo8() {
 
 					Connection con = null;
