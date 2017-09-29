@@ -23,6 +23,7 @@ public class StoredProcedures {
 	public void demo1() {
 
 		Connection con = null;
+		
 		try {
 			con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","scott","tiger");
 
