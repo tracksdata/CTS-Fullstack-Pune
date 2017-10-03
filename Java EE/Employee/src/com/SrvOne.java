@@ -16,7 +16,7 @@ public class SrvOne extends HttpServlet {
 		System.out.println("---- SrvOne Servlet service method");
 		
 		PrintWriter out= response.getWriter();
-		out.println("<h1>My First Service side java program</h1>");
+		out.println("<h1>My First Server side java program</h1>");
 		out.println("<h1>Welcome to my Application</h1>");
 		out.println("<h2><a href='cts'>Go to SrvTwo</a> </h2>");
 		
