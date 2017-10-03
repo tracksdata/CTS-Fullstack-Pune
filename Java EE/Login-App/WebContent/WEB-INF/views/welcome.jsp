@@ -1,3 +1,4 @@
+<%@taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +17,10 @@
 </head>
 <body class="container">
 	<br>
-	${pageContext.request.contextPath}
+	<c:if test="${sessionScope.user eq null}">
+		<jsp:forward page="login.jsp?msg=Session is expired. Login again" />
+	</c:if>
+
 	<div class="well">
 		<h2 align="center">Welcome to Product Application</h2>
 	</div>
@@ -39,8 +43,8 @@
 				<li class="active"><a href="#">Add Product</a></li>
 				<li class="active"><a href="#">Find Product</a></li>
 				<li class="active"><a href="#">Display Products</a></li>
-				<li class="active"><a href="#">Update Product</a></li>
-				<li class="active"><a href="#">Delete Product</a></li>
+				
+				
 				<li class="dropdown"><a data-toggle="dropdown"
 					class="dropdown-toggle" href="#">Account<b class="caret"></b></a>
 					<ul class="dropdown-menu">
@@ -62,6 +66,7 @@
 				</div>
 			</form>
 			<ul class="nav navbar-nav navbar-right">
+				<li class="active"><a href="#">Welcome ${sessionScope.user}</a></li>
 				<li><a href="logout.htm">Logout</a></li>
 			</ul>
 		</div>

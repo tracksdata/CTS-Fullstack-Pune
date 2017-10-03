@@ -5,6 +5,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -18,7 +19,6 @@ import com.cts.product.service.UserService;
 
 @Controller
 @Scope("session")
-@SessionAttributes(value= {"s1","s2"})
 public class LoginController {
 
 	@Autowired
@@ -32,7 +32,7 @@ public class LoginController {
 		if (userService.validateUser(login)) {
 			HttpSession session = request.getSession(true);
 			mav.addObject("login", login);
-			session.setAttribute("login", login);
+			session.setAttribute("user", login.getUserName());
 			mav.setViewName("welcome");
 
 		} else {
@@ -44,11 +44,12 @@ public class LoginController {
 	}
 
 	@RequestMapping("logout.htm")
-	public String test(Model model) {
+	public String test(Model model,HttpServletRequest request) {
 
-		System.out.println("---- logout  ");
+		HttpSession session = request.getSession(false);
+		session.removeAttribute("user");
+		session.invalidate();
 		model.addAttribute("message", "User logedout successfully");
-
 		return "login";
 	}
 
