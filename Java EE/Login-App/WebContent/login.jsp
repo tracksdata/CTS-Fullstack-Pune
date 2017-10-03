@@ -8,19 +8,11 @@
 <link rel="stylesheet" type="text/css"
 	href=".\node_modules\bootstrap\dist\css\bootstrap.css">
 <link rel="stylesheet" type="text/css" href=".\css\style.css">
-<script type="text/javascript">
-	function validateData(elementName) {
 
-	}
-</script>
 </head>
 <body class="container">
 <br/>
-<nav class="navbar navbar-inverse">
- <span><button>B1</button></span>
- <span><button>B1</button></span>
- <span><button>B1</button></span>
-</nav>
+
 
 
 	<div class="wrapper">

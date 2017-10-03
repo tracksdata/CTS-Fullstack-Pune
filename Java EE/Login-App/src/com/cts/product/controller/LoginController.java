@@ -24,6 +24,13 @@ public class LoginController {
 	@Autowired
 	private UserService userService;
 
+	@RequestMapping(name="login",value="/")
+	public String defaultMethod() {
+		
+		return "login";
+	}
+	
+	
 	@RequestMapping(value = "/validateUser")
 	public ModelAndView validateUser(@ModelAttribute("login") Login login, HttpServletRequest request) {
 

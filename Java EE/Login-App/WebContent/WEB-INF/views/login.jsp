@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css"
-	href=".\node_modules\bootstrap\dist\css\bootstrap.css">
-<link rel="stylesheet" type="text/css" href=".\css\style.css">
+	href="${pageContext.request.contextPath}\node_modules\bootstrap\dist\css\bootstrap.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}\css\style.css">
 <script type="text/javascript">
 	function validateData(elementName) {
 
