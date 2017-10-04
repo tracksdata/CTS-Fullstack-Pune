@@ -1,0 +1,36 @@
+-> Web container validates web.xml file while starting the       server
+-> web server validates each applications web.xml file while
+   starting the server
+-> if any applications web.xml is not valid, then that    application context object is not created.
+
+--> WC opens web.xml for each request to the server from teh    client, and verifies url-mapping value.
+--> If client request is matching with corresponding url-     mapping value, then WC picks up its server name, and     jumps into servlet setion, and  any servlet name found     with url-mapping servr name in servlet section, then, 
+    that servlet name's class gets executed
+
+-------------------------------------------------------
+--> WC creates servlet class object only once if it is not 
+    already created.
+--> Only one servlet object is created for multiple clients 
+    requests.
+--> init method gets called only one time for all the     requests
+--> service method gets called each time for all the clients 
+    requestes
+--> destroy method gets called only once, when context object is destroyed. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
