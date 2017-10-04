@@ -149,7 +149,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="Employee" path="/Employee" reloadable="true" source="org.eclipse.jst.jee.server:Employee"/><Context docBase="App" path="/App" reloadable="true" source="org.eclipse.jst.jee.server:App"/><Context docBase="App2" path="/App2" reloadable="true" source="org.eclipse.jst.jee.server:App2"/><Context docBase="App3" path="/App3" reloadable="true" source="org.eclipse.jst.jee.server:App3"/><Context docBase="Login-App" path="/Login-App" reloadable="true" source="org.eclipse.jst.jee.server:Login-App"/></Host>
+      <Context docBase="Employee" path="/Employee" reloadable="true" source="org.eclipse.jst.jee.server:Employee"/><Context docBase="App" path="/App" reloadable="true" source="org.eclipse.jst.jee.server:App"/><Context docBase="App2" path="/App2" reloadable="true" source="org.eclipse.jst.jee.server:App2"/><Context docBase="App3" path="/App3" reloadable="true" source="org.eclipse.jst.jee.server:App3"/><Context docBase="RequestObjectDemo" path="/RequestObjectDemo" reloadable="true" source="org.eclipse.jst.jee.server:RequestObjectDemo"/></Host>
     </Engine>
   </Service>
 </Server>
