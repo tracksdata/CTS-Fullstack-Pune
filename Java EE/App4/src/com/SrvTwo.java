@@ -10,16 +10,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class SrvOne extends HttpServlet {
+
+public class SrvTwo extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-	
-
-	public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		PrintWriter out=response.getWriter();
-		out.print("<h1>SrvOne Servlet</h1>");
-		
+		out.print("<h1>SrvTwo Servlet</h1>");
 		
 		ServletContext application= getServletContext();
 		ServletConfig config=getServletConfig();
@@ -30,8 +28,7 @@ public class SrvOne extends HttpServlet {
 
 		out.println("<h2>Employee Id: "+config.getInitParameter("empId"));
 		out.println("<h2>Employee Name: "+config.getInitParameter("empName"));
-
-		response.sendRedirect("one.html"); // redirection
+	
 	
 	}
 
