@@ -11,14 +11,20 @@ import javax.servlet.http.HttpServletResponse;
 
 public class SrvOne extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	public SrvOne() {
+		System.out.println("Sevlet Object Craedted "+this.hashCode());
+	}
 
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		PrintWriter out=response.getWriter();
 		
 		String s1= request.getParameter("fname");
+		System.out.println("THis: "+this.hashCode());
+		System.out.println("request for "+s1+" "+request.hashCode());
+		int s2=Integer.parseInt(request.getParameter("age"));
 		
-		String s2=request.getParameter("lname");
 		
 		String s3=request.getParameter("gen");
 		
