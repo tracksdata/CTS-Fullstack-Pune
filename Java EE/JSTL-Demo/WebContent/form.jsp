@@ -7,22 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
+<form action="one.jsp" method="post">
 
+Input Age: <input name="age"> <br>
+<input  type="submit" value="Go">
 
-<jsp:include page="/banner.jsp"/>
-<jsp:include page="/menu.jsp"/>
-
-
-<h2 align="center">Our Clients</h2>
-
-<h3>Line 1 Client</h3>
-<h3>Line 2 Client</h3>
-<h3>Line 3 Client</h3>
-<h3>Line 4 Client</h3>
-<h3>Line 5 Client</h3>
-
-
-
+</form>
 
 
 </body>
