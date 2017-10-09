@@ -5,6 +5,8 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+<jsp:include page="/menu.jsp"/><br/>
 <form action="prodController?menu=save" method="post">
 
 <h2 align="center">Welcome to Product Management</h2> <hr/>
@@ -28,7 +30,11 @@
 		<td><input type="text" name="price"></td>
 	</tr>
 	
-	
+	<tr>
+		<th colspan="2">
+			${msg}
+		</th>
+	</tr>
 	
 	<tr>
 		<th colspan="2">

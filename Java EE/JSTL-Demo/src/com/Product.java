@@ -5,7 +5,9 @@ public class Product {
 	private String prodName;
 	private double price;
 
-	
+	public Product() {
+		// TODO Auto-generated constructor stub
+	}
 	
 	public Product(String prodId, String prodName, double price) {
 		

@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -36,75 +37,64 @@ public class ProductController extends HttpServlet {
 
 			boolean status = prodDao.saveProduct(prod);
 
+			String page = null;
 			if (status) {
-				response.sendRedirect("index.html");
+				request.setAttribute("msg", "Product Added Asuccesfullt to DB");
+				page = "addproduct.jsp";
 			} else {
-				response.sendRedirect("error.html");
+				request.setAttribute("msg", "Product Not Added. There was some issue");
+				page = "addproduct.jsp";
 			}
 
-			System.out.println("--- saving");
+			RequestDispatcher rd = request.getRequestDispatcher(page);
+
+			rd.forward(request, response);
+
 		}
 		if (option.equals("search")) {
-			System.out.println("-- searching");
-			
-			String prodId=request.getParameter("prodId");
-			Product prod= prodDao.findProduct(prodId);
-			
-			if(prod!=null) {
-				out.println("<html><body><table border=1>");
-				out.println("<tr><th>Product Id</th><th>Product Name</th><th>Price</th></tr>");
-				out.println("<tr>");
-				out.println("<td>"+prod.getProdId()+"</td>");
-				out.println("<td>"+prod.getProdName()+"</td>");
-				out.println("<td>"+prod.getPrice()+"</td>");
-				out.println("</tr>");
-				out.println("</table>");
-			
-			}else {
-				out.println("<h2>Product Id "+prodId+" is not found in DB");
-				out.println("<h2><a href='search.html'>Search Again</a>");
+
+			String prodId = request.getParameter("prodId");
+			Product prod = prodDao.findProduct(prodId);
+
+			String page = null;
+
+			if (prod != null) {
+				request.setAttribute("product", prod);
+				page = "findresults.jsp";
+			} else {
+				request.setAttribute("msg", "Product Id with " + prodId + " Not found in DB");
+				page = "search.jsp";
 			}
-			
-			
+
+			RequestDispatcher rd = request.getRequestDispatcher(page);
+			rd.forward(request, response);
+
 		}
 
+	
 		if (option.equals("update")) {
-			System.out.println("Updating");
-			
-			String prodId=request.getParameter("prodId");
-			Product prod= prodDao.findProduct(prodId);
-			
-			if(prod!=null) {
-				
-				out.println("<html><body><form action='prodController?menu=update1' method='post'><table>");
-				out.println("<tr>");
-					out.println("<td>Product Id</td>");
-					out.println("<td> <input type=text name=prodId value="+prod.getProdId()+" readonly=true> </td>");
-				out.println("</tr>");
-				
-				out.println("<tr>");
-					out.println("<td>Product Name</td>");
-					out.println("<td> <input type=text name=prodName value="+prod.getProdName()+"> </td>");
-				out.println("</tr>");
+			String prodId = request.getParameter("prodId");
+			Product prod = prodDao.findProduct(prodId);
+
 			
 			
-				out.println("<tr>");
-					out.println("<td>Price</td>");
-					out.println("<td> <input type=text name=price value="+prod.getPrice()+"> </td>");
-				out.println("</tr>");
-			
-			out.println("<tr>");
-					out.print("<th colspan=2>");
-					out.println("<input type=submit value=Update></th>");
-			out.println("</tr>");
-			
-			out.println("</table></form>");
+			String page = null;
+
+			if (prod != null) {
+				request.setAttribute("product", prod);
+				page = "updateform.jsp";
+			} else {
+				request.setAttribute("msg", "Product Id with " + prodId + " Not found in DB");
+				page = "update.jsp";
 			}
+
+			RequestDispatcher rd = request.getRequestDispatcher(page);
+			rd.forward(request, response);
+
 		}
-		
-		if(option.equals("update1")) {
-			
-			
+
+		if (option.equals("update1")) {
+
 			String prodId = request.getParameter("prodId");
 			String prodName = request.getParameter("prodName");
 			double price = Double.parseDouble(request.getParameter("price"));
@@ -113,77 +103,60 @@ public class ProductController extends HttpServlet {
 			prod.setProdId(prodId);
 			prod.setProdName(prodName);
 			prod.setPrice(price);
+
+			boolean status = prodDao.updateProduct(prod);
 			
-			boolean status= prodDao.updateProduct(prod);
 			
-			if(status) {
-				out.println("<h2>Product Updated</h2>");
-				out.println("<h3><a href='index.html'>Home</a>");
-			}else {
-				out.println("<h2>Product is not updated.. Issue with DB");
-				out.println("<h3><a href='index.html'>Home</a>");
+			
+			if (status) {
+			request.setAttribute("msg", "Peroduct ID "+prod.getProdId()+" Updated to DB");
+				
+			} else {
+				request.setAttribute("msg", "Product Id with "+prod.getProdId()+" Not updated");
 			}
 			
+			RequestDispatcher rd=request.getRequestDispatcher("update.jsp");
+			rd.forward(request, response);
+
 		}
-		
-		if(option.equals("findList")) {
-			List<Product> prods= prodDao.listAll();
-			out.println("<form action=prodController?menu=search method=post>");
-			out.println("<html><body><table border=1>");
-			out.println("<tr><th>Product Id</th>");
-			
-			out.println("<td><select name=prodId>");
-		//	out.println("");
-			for(Product prod:prods) {
-				out.println("<option>");
-				out.println(prod.getProdId());
-			}
-			out.println("</select></td> </tr> ");
-			out.println("<tr><th colspan=2><input type=submit value=Search></th></form>");
-			
-			out.println("</table>");
-		
+
+		if (option.equals("findList")) {
+			List<Product> prods = prodDao.listAll();
+
+			request.setAttribute("prods", prods);
+
+			RequestDispatcher rd = request.getRequestDispatcher("/search_v1.jsp");
+			rd.forward(request, response);
+
 		}
-		
 
 		if (option.equals("listAll")) {
-			System.out.println("-- listing all");
-			List<Product> prods= prodDao.listAll();
-			
-			out.println("<html><body><table border=1>");
-			out.println("<tr><th>Product Id</th><th>Product Name</th><th>Price</th></tr>");
-			
-			for(Product prod:prods) {
-				out.println("<tr>");
-				out.println("<td>"+prod.getProdId()+"</td>");
-				out.println("<td>"+prod.getProdName()+"</td>");
-				out.println("<td>"+prod.getPrice()+"</td>");
-				out.println("</tr>");
-				
-			}
-			
-			
-			out.println("</table>");
-			
-			
-			
-			
+
+			List<Product> prods = prodDao.listAll();
+
+			request.setAttribute("products", prods);
+
+			RequestDispatcher rd = request.getRequestDispatcher("display.jsp");
+			rd.forward(request, response);
+
 		}
 
 		if (option.equals("delete")) {
-			System.out.println("--- deleting..");
 			
-			String prodId=request.getParameter("prodId");
-			boolean  status= prodDao.deleteProduct(prodId);
-		
-			if(status) {
-				out.println("<h2>Product "+prodId+" deleted from DB</h2>");
-				out.println("<h3><a href='index.html'>Home</a>");
-			}else {
-				out.println("<h2> "+prodId+"Product is not found in DB");
-				out.println("<h3><a href='index.html'>Home</a>");
-			}
-	}
+
+			String prodId = request.getParameter("prodId");
+			boolean status = prodDao.deleteProduct(prodId);
+
+			if (status) {
+				request.setAttribute("msg", "Peroduct ID "+prodId+" Deleted from DB");
+					
+				} else {
+					request.setAttribute("msg", "Product Id with "+prodId+" Not Deleted from DB");
+				}
+				
+				RequestDispatcher rd=request.getRequestDispatcher("delete.jsp");
+				rd.forward(request, response);
+		}
 
 	}
 
