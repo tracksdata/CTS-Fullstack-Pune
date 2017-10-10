@@ -9,8 +9,10 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.cts.product.dao.ProductDaoImpl;
+import com.cts.product.model.Login;
 import com.cts.product.model.Product;
 
 public class ProductController extends HttpServlet {
@@ -18,11 +20,43 @@ public class ProductController extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
+		response.setHeader("Cache-Control", "private, no-store, no-cache, must-revalidate");
+
 		PrintWriter out = response.getWriter();
 
 		String option = request.getParameter("menu");
 
 		ProductDaoImpl prodDao = new ProductDaoImpl();
+		
+		HttpSession session=null;
+		if(option.equals("login")) {
+			Login login=new Login();
+			
+			login.setUserName(request.getParameter("userName"));
+			login.setPassword(request.getParameter("password"));
+			
+			
+			boolean status= prodDao.validateUser(login);
+			
+			if(status) {
+				session=request.getSession(true);
+				session.setAttribute("user", login.getUserName());
+				response.sendRedirect("index.jsp");
+			}else {
+				response.sendRedirect("login.jsp?msg=Invalid User Name/Password");
+			}
+			
+			
+		
+		} // login
+		
+		if(option.equals("logout")) {
+			session=request.getSession(false);
+			session.removeAttribute("user");
+			response.sendRedirect("login.jsp?msg=usrr Successfully loged out");
+		}
+		
 
 		if (option.equals("save")) {
 

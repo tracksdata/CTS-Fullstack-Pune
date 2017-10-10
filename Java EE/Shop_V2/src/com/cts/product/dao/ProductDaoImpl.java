@@ -10,6 +10,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
+import com.cts.product.model.Login;
 import com.cts.product.model.Product;
 
 public class ProductDaoImpl implements ProductDao {
@@ -149,6 +150,27 @@ public class ProductDaoImpl implements ProductDao {
 		}
 
 		return flag;
+	}
+
+	@Override
+	public boolean validateUser(Login login) {
+		boolean  status=false;
+		try {
+			con=DBUtils.getConnection();
+			ps=con.prepareStatement(loginQuery);
+			ps.setString(1, login.getUserName());
+			ps.setString(2, login.getPassword());
+			
+			rs=ps.executeQuery();
+			
+			if(rs.next()) {
+				status=true;
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return status;
 	}
 
 }
