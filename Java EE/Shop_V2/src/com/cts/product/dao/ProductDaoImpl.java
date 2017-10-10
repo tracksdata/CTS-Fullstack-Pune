@@ -173,4 +173,25 @@ public class ProductDaoImpl implements ProductDao {
 		return status;
 	}
 
+	@Override
+	public boolean checkUser(String userName) {
+		
+		boolean status=false;
+		try {
+			con=DBUtils.getConnection();
+			ps=con.prepareStatement(userQry);
+			ps.setString(1, userName);
+			rs=ps.executeQuery();
+			
+			if(rs.next()) {
+				status=true;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		return status;
+	}
+
 }

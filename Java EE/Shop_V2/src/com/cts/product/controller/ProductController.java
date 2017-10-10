@@ -30,6 +30,17 @@ public class ProductController extends HttpServlet {
 		ProductDaoImpl prodDao = new ProductDaoImpl();
 		
 		HttpSession session=null;
+		
+		if(option.equals("chkUser")) {
+			String userName=request.getParameter("userName");
+			boolean status=prodDao.checkUser(userName);
+			
+			response.sendRedirect("test.jsp?msg="+status);
+			
+			
+			
+		}
+		
 		if(option.equals("login")) {
 			Login login=new Login();
 			
