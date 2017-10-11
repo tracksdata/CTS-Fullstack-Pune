@@ -17,7 +17,7 @@
 		<property name="connection.pool_size">1</property>
 
 		<!-- SQL dialect -->
-		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
 
 		<!-- Enable Hibernate's automatic session context management -->
 		<property name="current_session_context_class">thread</property>
@@ -30,11 +30,14 @@
 		<property name="format_sql">true</property>
 
 		<!-- Drop and re-create the database schema on startup -->
-		<property name="hbm2ddl.auto">create</property>
+		<property name="hbm2ddl.auto">update</property>
 
 		<!-- Mapping Resources -->
 		
 <!-- 		<mapping class="com.Employee" /> -->
+
+<!-- 		<mapping resource="com/Product.hbm.xml" /> -->
+		<mapping resource="com/Customer.hbm.xml" />
 
 	</session-factory>
 

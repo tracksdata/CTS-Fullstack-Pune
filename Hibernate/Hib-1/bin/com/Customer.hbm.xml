@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.Customer" table="test.my_cust">
+		<!-- lets the appliction assign an identifier  -->
+		
+		<id name="custId" column="cust_id" type="integer"/>
+		<property name="custName" column="cust_name" type="string" length="20"/>
+		<property name="custAddr" column="cust_address" type="string" />
+		
+	</class> 
+</hibernate-mapping>
