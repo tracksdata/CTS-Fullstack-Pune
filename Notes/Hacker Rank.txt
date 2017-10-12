@@ -1,0 +1,6 @@
+->In HackerRank practice ask associates to try out    problems in Java 
+ https://www.hackerrank.com/domains/java/java-                                         introduction
+->and also in algorithms      https://www.hackerrank.com/domains/algorithms
+->and data structures    https://www.hackerrank.com/domains/data-structures
+
+ 
