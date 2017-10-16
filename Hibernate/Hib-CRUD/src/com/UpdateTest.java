@@ -10,31 +10,23 @@ import com.utils.HibUtils;
 public class UpdateTest {
 
 	public static void main(String[] args) {
-		
-		
-		SessionFactory sf=HibUtils.getSessionFactory();
-		Session s1=sf.openSession();
-		
-	   Product prod=s1.load(Product.class, "P001");
-	   Product p2=prod;
-	   
-	 
-	   p2.setProdName("Black Pen");
-	   
-	   s1.update(p2);
-	   
-	   s1.beginTransaction().commit();
-	   
-	   
-	   
-	   
-	   
-	   System.out.println("-----------------------------------");
-		
-		
-		
-		
-		
+
+		SessionFactory sf = HibUtils.getSessionFactory();
+		Session s1 = sf.openSession();
+
+		Product prod = s1.load(Product.class, "P001");
+
+		// Product prod=new Product();
+		// prod.setProdId("P001");
+		prod.setProdName("Pen");
+		prod.setPrice(343);
+
+		s1.update(prod);
+		// s1.saveOrUpdate(prod);
+
+		s1.beginTransaction().commit();
+
+		System.out.println("-----------------------------------");
 
 	}
 
