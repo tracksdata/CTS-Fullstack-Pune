@@ -38,11 +38,17 @@
 		<mapping class="com.mapping.onetoone.Employee" />
 		<mapping class="com.mapping.onetoone.Department" />
 		 -->
-		
+		 <!--
 		<mapping class="com.mapping.onetomany.Employee" />
 		<mapping class="com.mapping.onetomany.Department" />
-
-
+		-->
+		
+		<!--
+		<mapping class="com.mapping.manytoone.Employee" />
+		<mapping class="com.mapping.manytoone.Department" />
+		-->
+		<mapping class="com.mapping.manytomany.Test" />
+		<mapping class="com.mapping.manytomany.Patient" />
 		
 
 	</session-factory>
