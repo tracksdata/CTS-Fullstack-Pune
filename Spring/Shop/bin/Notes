@@ -1,0 +1,39 @@
+
+
+ Inversion of Control ( IOC )
+ ----------------------------
+ 
+    Two types Objs
+    ---------------
+    
+    	a. Dependent Objs
+    	b. Dependency Objs
+ 
+ 
+ IOC : How dependent obj is going to get/use dependency obj
+       to finish its work.
+       
+  ----------------------------------------------------
+  
+  
+  Proj: Shopping Cart
+  
+  UseCase : Submit Cart Get Bill with Total Price
+  
+  		 To do this work i am going to use two objs/comp
+  		 
+  		 1. Billing     --> List the Items from Cart with TotAl Amount
+  		 2. PriceMatrix --> Will give Latest Price of Each Item based on that day.
+  		 	
+  
+  ----------------------------------------------------
+  
+  
+  
+  
+  
+  
+  
+  
+  
+       

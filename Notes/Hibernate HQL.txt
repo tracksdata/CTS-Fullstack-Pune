@@ -1,0 +1,17 @@
+emp_id	emp_name	salary
+1	Abc		1000
+2	Xyz		2000	
+3	AAA		3000
+---------------------------
+@Entity
+Employee{
+int empId
+String empName;
+double sal;
+}
+
+HQL:  from Employee : 3 records with 3 columns 
+HQL:  select emp.empName from Employee as emp; 3 recs 1 col
+HQL: select e.empId,e.sal from Employee as e;
+HQL: from Employee as e where e.empId=1;
+
