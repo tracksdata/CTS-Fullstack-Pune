@@ -1,0 +1,144 @@
+1.       DBMS_FLASHBACK.GET_SYSTEM.CHANGE_NUMBER helps to obtain
+current SCN at my time.
+
+a.       True
+
+b.      False
+
+
+
+2.       FUNC is used to obtain additional information about errors.
+(Choose Two)
+
+
+
+3.       Create CLUSTER in Oracle
+
+ALTER cluster emp_dept modify...
+
+CREATE CLUSTER emp_dept(Deptno number(2))...
+
+CREATE emp_dept(deptno number(2) CLUSTER...
+
+ALTER...
+
+
+
+4.       Sequence generator in SQL (Choose Three) Oracle stores all
+sequences in system tablespace.
+
+
+
+5.       SELECT empname from emp where empname like ‘_ill’;
+
+
+
+6.       The statement retrieves one row for employee 7001.
+
+
+
+7.       Backup & Recovery, Plan & create DB – DBA tasks.
+
+
+
+8.       True about identifiers - 30 chars in length, identifiers must
+be declared before the code, ...
+
+
+
+9.       Logical unit of DB storage – tablespace.
+
+
+
+10.   Returns the starting element of a collection – First
+
+
+
+11.   Public SYNONYM available – all users, private... (SYNONYM is an
+alias for a schema object).
+
+
+
+12.   To_char(sysdate, FMDay month yyyy) from dual
+
+
+
+13.   1.234, 3.45, 1.23 – number
+
+
+
+14.   SELECT jobcode, Date_of_joining from emp order by jobcode and
+date_of_joining DESC
+
+
+
+15.   SELECT dept_id,min(sal),max(sal) from emp where min(sal) <2000
+and max(sal)>5000 group by dept_id
+
+
+
+16.   Deadlock – a user-defined exception raised explicitly.
+
+
+
+17.   After update, changing 7 rows – 1 row inserted.
+
+
+
+18.   Pass a value from procedure – OUT.
+
+
+
+19.   SELECT DISTINCT city, supplier_name from suppliers...
+
+
+
+20.   INITCAP
+
+
+
+21.   CASCADED DELETE
+
+
+
+22.   30
+
+
+
+23.   LINE 2 ERROR
+
+
+
+24.   LOWER,INITCAP,UPPER
+
+
+
+25.   ARITHMETIC OPERATOR
+
+
+
+26.   AND OPERATOR, UNION ALL
+
+
+
+27.   UPDATE TABLE customer_details
+
+SET journey_date = 19-APR-2008
+
+where customer_id=4501; (error in lines 1 & 2).
+
+
+
+28.   IS NULL
+
+
+
+29.   SELECT customer_id, customer_name from cust_pur_details where
+purchase_day NOT IN (‘MON’,’THUR’);
+
+
+
+
+
+30.   SELF JOIN – SELECT e.employee_id,m.emp_name from employees e,
+employees m where e.mgrid=m.mgrid and e.salary>4000;

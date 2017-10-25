@@ -1,0 +1,386 @@
+Q1. With SQL, how can you delete the records where the "FirstName" is "Peter" in the Persons Table?
+(Choose correct one from multiple bellow)
+
+ 
+
+1.       DELETE ROW FirstName='Peter' FROM Persons
+
+2.       DELETE FirstName='Peter' FROM Persons
+
+3.       DELETE FROM Persons WHERE FirstName = 'Peter'
+
+4.       None
+
+ 
+
+Q2. OCI stands for
+
+1.       Open Call Interface
+
+2.       Oracle Call Interface
+
+3.       Oracle Communication Interface
+
+   4. Oracle Connection Interface
+
+ 
+
+Q3. Which SQL statement is used to insert new data in a database?
+
+1.       INSERT NEW
+
+2.       ADD RECORD
+
+3.       ADD NEW
+
+4.       INSERT INTO
+
+ 
+
+Q4. What was a problem with navigational data access languages?
+
+
+1.       The user had to have knowledge of the table and index structures.
+
+2.       Navigational data access was far slower than declarative access.
+
+3.       Navigational access languages required the coder to embed their queries inside a procedural language shell.
+
+4.       Navigational languages were far slower then SQL
+
+ 
+
+ 
+
+Q5. What best describes the relationship between indexes and SQL performance?
+
+
+1.       Indexes are only used in special cases
+
+2.       Indexes are used to make table storage more efficient
+
+3.       Indexes rarely make a difference in SQL performance
+
+4.       Indexes exist solely to improve query speed.
+
+ 
+
+ 
+
+Q6. Which SQL statement is used to return only different values?
+
+1.       SELECT UNIQUE
+
+2.       SELECT DIFFERENT
+
+3.       SELECT DISTINCT
+
+4.       None of the above
+
+ 
+
+ 
+
+Q7. The CASE expression uses a selector which is:
+
+1.       The WHEN clause.
+
+2.       An expression whose value is used to select one of several alternatives.
+
+3.       SQL SELECT statement used in an IF statement.
+
+4.       The WHERE clause.
+
+ 
+
+Q8. The Utl_Smtp package provides:
+
+1.       Primitives to send email.
+
+2.       Used for collection statistics.
+
+3.       For networking in Oracle 9i.
+
+4.       1 and 2
+
+ 
+
+Q9. Which is a major problem with SQL?
+
+ 
+
+1.       SQL cannot support object-orientation
+
+2.       The same query can be written in many ways, each with vastly different execution plans.
+
+3.       SQL syntax is too difficult for non-computer professionals to use
+
+4.       SQL creates excessive locks within the Oracle database
+
+ 
+
+Q10. The name of the only column in the DUAL table is
+
+1.       X
+
+2.       C
+
+3.       DUMMY
+
+4.       None
+
+ 
+
+Q11. With SQL, how do you select all the records from a table named "Persons" where the value of the column "FirstName" is "Peter"?
+
+
+1.       SELECT * FROM Persons WHERE FirstName<>'Peter'
+
+2.       SELECT [all] FROM Persons WHERE FirstName='Peter'
+
+3.       SELECT * FROM Persons WHERE FirstName='Peter'
+
+4.       SELECT [all] FROM Persons WHERE FirstName LIKE 'Peter'
+
+ 
+
+Q12. How can you change "Hansen" into "Nilsen" in the "LastName" column in the Persons table?
+
+1.       MODIFY Persons SET LastName='Nilsen' WHERE LastName='Hansen'
+
+2.       UPDATE Persons SET LastName='Hansen' INTO LastName='Nilsen'
+
+3.       UPDATE Persons SET LastName='Nilsen' WHERE LastName='Hansen'
+
+4.       MODIFY Persons SET LastName='Hansen' INTO LastName='Nilsen
+
+ 
+
+ 
+
+Q13. In a query with a GROUP BY clause, the columns in the SELECT clause
+
+ 
+
+1.       must be aggregate functions only
+
+2.       must also appear in the GROUP BY clause
+
+3.       must also appear in the GROUP BY and HAVING clauses
+
+4.       Can be selected
+
+ 
+
+Q 14.
+
+Q15.
+
+ 
+
+Q16. The spnc_makefile.mk make file is used to:
+
+1.       To invoke a procedure.
+
+2.       Organize objects in the database.
+
+3.       Speed up PL/SQL procedures.
+
+4.       A, B and C.
+
+ 
+
+Q16.
+
+ 
+
+Q18. Bulk binds improve performance by:
+
+1.       Improving the optimizer.
+
+2.       Resetting the statistics in the catalog.
+
+3.       Minimizing the number of context switches between the PL/SQL and SQL engines.
+
+4.       Performing a Forward Prefetch.
+
+ 
+
+Q19. The OR operator displays a record if ANY conditions listed are true. The AND operator displays a record if ALL of the conditions listed are true
+
+1.       False
+
+2.       True
+
+3.       None
+
+4.       Both
+
+ 
+
+Q20. Which SQL keyword is used to sort the result-set?
+
+1.       SORT
+
+2.       ORDER
+
+3.       SORT BY
+
+4.       ORDER BY
+
+ 
+
+Q21. Examine the data in the EMPLOYEES and DEPARTMENTS tables.
+EMPLOYEES
+LAST_NAME DEPARTMENT_ID SALARY
+Getz 10 3000
+Davis 20 1500
+King 20 2200
+Davis 30 5000
+Kochhar 5000
+DEPARTMENTS
+DEPARTMENT_ID DEPARTMENT_NAME
+10 Sales
+20 Marketing
+30 Accounts
+40 Administration
+You want to retrieve all employees, whether or not they have matching departments in
+the departments table. Which query would you use?
+
+ 
+
+1.       SELECT last_name, department_name FROM employees , departments(+);
+
+2.       SELECT last_name, department_name FROM employees e LEFT OUTER JOIN departments d ON (e.department_id = d.department_id);
+
+3.       SELECT last_name, department_name FROM employees(+) e JOIN departments d ON (e.department_id = d.department_id);
+
+4.       SELECT last_name, department_name FROM employees(+) , departments ON (e.department_id = d.department_id);
+
+ 
+
+Q22. What is a TRUNCATE statement in Oracle?
+
+1.       A DDL command and can be rolled back
+
+2.       A DML command and cannot be rolled back
+
+3.       A DDL command and cannot be rolled back.
+
+4.       A TCL command and can be rolled back
+
+ 
+
+ 
+
+Q23. The BULK COLLECT clause:
+
+1.       Can only be used in server-side programs.
+
+2.       Can only be used in client-side programs.
+
+3.       Can be used in client and server-side programs.
+
+4.       Requires the PL/SQL be wrapped.
+
+ 
+
+Q24. Comments in a PL/SQL code are inserted using
+
+1.       ?
+
+2.       /* */
+
+3.       Both (1) and (2)
+
+4.       #
+
+ 
+
+Q25. What are the difference between %ROWTYPE and %TYPE in PL/SQL?
+
+1.       %ROWTYPE is used to associate a variable with an entire table row whereas %TYPE is used to associate a variable with a single column type.
+
+2.       %ROWTYPE can be used in a cursor array processing whereas %TYPE cann't be.
+
+3.       %TYPE can be used in a cursor array processing whereas ROWTYPE cann't be.
+
+4.       %ROWTYPE can be used in a SQL also whereas %TYPE cann't be in SQL.
+
+ 
+
+Q26. Which clause should you use to exclude GROUP results ?
+
+1.       WHERE
+
+2.       RESTRICT
+
+3.       HAVING
+
+4.       GROUP BY
+
+ 
+
+ 
+
+ 
+
+Q27. Consider a table TAB with a single row
+NAME
+CHARRIS
+Then, the query
+SELECT SUBSTR(Name,-3) FROM TAB gives
+
+ 
+
+1.       RIS
+
+2.       CHA
+
+3.       ARRIS
+
+4.       ARR
+
+ 
+
+Q28. Which SQL statement is used to extract data from a database?
+
+ 
+
+1.       OPEN
+
+2.       SELECT
+
+3.       GET
+
+4.       EXTRACT
+
+ 
+
+Q29. With SQL, how do you select all the records from a table named "Persons" where the "FirstName" is "Peter" and the "LastName" is "Jackson"?
+
+1.       SELECT * FROM Persons WHERE FirstName='Peter' AND LastName='Jackson'
+
+2.       SELECT FirstName='Peter', LastName='Jackson' FROM Persons
+
+3.       SELECT * FROM Persons WHERE FirstName<>'Peter' AND LastName<>'Jackson'
+
+4.       None
+
+ 
+
+ 
+
+ 
+
+Q30. A ref is a:
+
+ 
+
+1.       Method of passing the values of parameters.
+
+2.       Pointer to an object.
+
+3.       Method of compiling the PL/SQL.
+
+4.       A wrapper for encrypting the source.

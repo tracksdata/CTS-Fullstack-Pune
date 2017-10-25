@@ -1,0 +1,685 @@
+Oracle 9i
+
+
+1. Which of the following is true
+
+A.Lgwr moves data from logbuffer to logfiles
+B.Lgwr moves data from logfiles to logbuffer
+C.Dbwr moves data from logbuffer to logfiles
+D.Lgwr moves data from logbuffer to archivefiles
+
+2. Which of the following is the largest storage unit in oracle
+
+A.Block
+B.extent
+C.Tablespace
+D.segment
+
+3. When do we create bitmap indexes
+
+A.OLTP
+B.DSS
+C.Where clause has functions
+D.Tables that have only one record
+
+
+4. Which tool helps you to identify the path used by oracle
+
+A.Explain plan
+B.Tkprof
+C.DBMS_PROFILER
+D.Statspack
+
+
+5. Which of the following mechnism is used for read consistency in oracle
+
+A.Archive files
+B.Redo
+C.Undo
+D.Temp
+
+
+6. Which of the following is not a background process
+
+A.Smon
+B.Pmon
+C.sqlplus
+D.Dbwr
+
+
+7. Which of the following is not part of SGA
+
+A.Shared pool
+B.Largepool
+C.Database buffer cache
+D.dispatchers
+
+
+8. For which two types of constraints will a unique index be 
+   automatically created
+
+A. Unique
+B. Primary key
+C. Not null
+D. Foreign key
+E. Check 
+
+
+9. Which statement types wouldbe used to remove transactions more than one    year old from the table x (any table)
+
+A. TCL
+B. DCL
+C. DML
+D. DRL
+
+
+10. Which four statements about oracle constraints true (Choose four)
+
+A. A unique constraint specifies a column or combination of columns
+   whose values mustbe unique for all rows in a table
+
+B. A check constraint specifies a condition that mustbe true
+
+C. A NOT NULL constraint ensures that all null values are not allowed 
+   in a column
+D. A Primary key constraint uniquely identifies each row of a table
+
+E. A unique constraint allows prohibits the input of nulls because 
+   nulls do not specify the constraint conditions
+
+F. A primary key constraint allows null values in a column when the column
+   is part of a set of column that uniquely identifies each row
+
+11. How do you create an user (Write the syntax)
+
+
+12. A Table emp has following columns 
+    eno,ename,salary,deptno
+  you execute the below statement
+
+Create index emp_idx on emp (eno,firstname);
+
+Which statement is true
+
+A. Oracle will create  unique index
+B. Oracle throw an error
+C. Oracle will create primary key index
+D. Oracle will create function based index
+
+
+13. Which statement concerning sql functions is true
+
+A. Character functions can return character or number values
+B. Conversion functions convert a column definition from one date type 
+   to another data type
+C. Single row functions can only be used in SELECT AND Where clauses
+D. All data functions return DATE data type values.
+
+14. Which of the following statement is used for creating primary key
+    for a table emp
+
+A. Alter table emp add constraint eno primary key;
+B. Alter table emp add primary key (eno);
+C. Alter table emp modify eno primary key
+
+
+15. Which statement about a sequence is true
+
+
+A. Creating a sequence causes sequence numbers are stored in a table
+B. One sequence canbe used for multiple tables in the same user schema
+C. A sequence can only be used to create a primary key value
+D. A sequence slows down the performance
+
+
+16. Which select statement will display the next value parts_id_seq
+    sequence by actually retrieving the value from the sequence
+
+A. Select NEXTVAL (parts_id_seq) from sys.dual;
+B. Select parts_id_seq.NEXTVAL from parts;
+C. Select parts_id_seq.NEXTVAL FROM SYS.dual;
+D. Select parts_id_seq NEXTVAL from inventory;
+
+
+
+17. Which tool is used for taking  a logical backup
+
+A. EXplain plan
+B. Export
+C. DBMS_PROFILER
+D. Import
+
+
+18. Which process clears the dead connections
+
+A. Dbwr
+B. Lgwr
+C. clean
+D. Pmon
+
+
+19. Which three functions can be used to manipulate charcter,number,
+    or date column values (Choose three)
+
+A. CONCAT
+B. ROUND
+C. Trunc
+D. Rpad
+E. Instrb
+
+
+20. Which of the following process maintains database consistency
+
+A. Consistent
+B. Maintain
+C. DBWR
+D. CKPT
+
+
+
+Oracle 9i
+
+1. Which of the following is the largest storage unit in oracle
+
+A.Block
+B.extent
+C.Tablespace
+D.segment
+
+2. For which two types of constraints will a unique index be 
+   automatically created
+
+A. Unique
+B. Primary key
+C. Not null
+D. Foreign key
+E. Check
+
+3 Which of the following statement is used for creating primary key
+    for a table emp
+
+A. Alter table emp add constraint eno primary key;
+B. Alter table emp add primary key (eno);
+C. Alter table emp modify eno primary key
+
+4 Which three functions can be used to manipulate charcter,number,
+    or date column values (Choose three)
+
+A. CONCAT
+B. ROUND
+C. Trunc
+D. Rpad
+E. Instrb
+
+5. Which of the following is true
+
+A.Lgwr moves data from logbuffer to logfiles
+B.Lgwr moves data from logfiles to logbuffer
+C.Dbwr moves data from logbuffer to logfiles
+D.Lgwr moves data from logbuffer to archivefiles
+
+6. Which of the following mechnism is used for read consistency in oracle
+
+A.Archive files
+B.Redo
+C.Undo
+D.Temp
+
+7 Which four statements about oracle constraints true (Choose four)
+
+A. A unique constraint specifies a column or combination of columns
+   whose values mustbe unique for all rows in a table
+
+B. A check constraint specifies a condition that mustbe true
+
+C. A NOT NULL constraint ensures that all null values are not allowed 
+   in a column
+D. A Primary key constraint uniquely identifies each row of a table
+
+E. A unique constraint allows prohibits the input of nulls because 
+   nulls do not specify the constraint conditions
+
+F. A primary key constraint allows null values in a column when the column
+   is part of a set of column that uniquely identifies each row
+
+8 Which statement concerning sql functions is true
+
+A. Character functions can return character or number values
+B. Conversion functions convert a column definition from one date type 
+   to another data type
+C. Single row functions can only be used in SELECT AND Where clauses
+D. All data functions return DATE data type values.
+
+9 Which statement about a sequence is true
+
+
+A. Creating a sequence causes sequence numbers are stored in a table
+B. One sequence canbe used for multiple tables in the same user schema
+C. A sequence can only be used to create a primary key value
+D. A sequence slows down the performance
+
+10. Which of the following process maintains database consistency
+
+A. Consistent
+B. Maintain
+C. DBWR
+D. CKPT
+
+11.When do we create bitmap indexes
+
+A.OLTP
+B.DSS
+C.Where clause has functions
+D.Tables that have only one record
+
+12 Which statement types wouldbe used to remove transactions more than one    year old from the table x (any table)
+
+A. TCL
+B. DCL
+C. DML
+D. DRL
+
+13 Which tool helps you to identify the path used by oracle
+
+A.Explain plan
+B.Tkprof
+C.DBMS_PROFILER
+D.Statspack
+
+14.How do you create an user (Write the syntax)
+
+
+
+15.Which tool is used for taking a logical backup
+
+A. Explain plan
+B. Export
+C. DBMS_PROFILER
+D. Import
+
+16.A Table emp has following columns 
+    eno,ename,salary,deptno
+  you execute the below statement
+
+Create index emp_idx on emp (eno,firstname);
+
+Which statement is true
+
+A. Oracle will create  unique index
+B. Oracle throw an error
+C. Oracle will create primary key index
+D. Oracle will create function based index
+
+17 Which select statement will display the next value parts_id_seq
+    sequence by actually retrieving the value from the sequence
+
+A. Select NEXTVAL (parts_id_seq) from sys.dual;
+B. Select parts_id_seq.NEXTVAL from parts;
+C. Select parts_id_seq.NEXTVAL FROM SYS.dual;
+D. Select parts_id_seq NEXTVAL from inventory;
+
+18 Which of the following is not a background process
+
+A.Smon
+B.Pmon
+C.sqlplus
+D.Dbwr
+
+
+19.Which process clears the dead connections
+
+A. Dbwr
+B. Lgwr
+C. clean
+D. Pmon
+
+
+20.Which of the following is not part of SGA
+
+A.Shared pool
+B.Largepool
+C.Database buffer cache
+D.dispatchers
+
+
+
+
+Oracle 9i
+
+1. Which of the following mechnism is used for read consistency in oracle
+
+A.Archive files
+B.Redo
+C.Undo
+D.Temp
+
+2. Which four statements about oracle constraints true (Choose four)
+
+A. A unique constraint specifies a column or combination of columns
+   whose values mustbe unique for all rows in a table
+
+B. A check constraint specifies a condition that mustbe true
+
+C. A NOT NULL constraint ensures that all null values are not allowed 
+   in a column
+D. A Primary key constraint uniquely identifies each row of a table
+
+E. A unique constraint allows prohibits the input of nulls because 
+   nulls do not specify the constraint conditions
+
+F. A primary key constraint allows null values in a column when the column
+   is part of a set of column that uniquely identifies each row
+
+3. Which statement about a sequence is true
+
+
+A. Creating a sequence causes sequence numbers are stored in a table
+B. One sequence canbe used for multiple tables in the same user schema
+C. A sequence can only be used to create a primary key value
+D. A sequence slows down the performance
+
+4. Which of the following process maintains database consistency
+
+A. Consistent
+B. Maintain
+C. DBWR
+D. CKPT
+
+5. Which three functions can be used to manipulate charcter,number,
+    or date column values (Choose three)
+
+A. CONCAT
+B. ROUND
+C. Trunc
+D. Rpad
+E. Instrb
+
+6. Which of the following statement is used for creating primary key
+    for a table emp
+
+A. Alter table emp add constraint eno primary key;
+B. Alter table emp add primary key (eno);
+C. Alter table emp modify eno primary key
+
+7. Which statement types wouldbe used to remove transactions more than one    year old from the table x (any table)
+
+A. TCL
+B. DCL
+C. DML
+D. DRL
+
+
+8. Which tool helps you to identify the path used by oracle
+
+A.Explain plan
+B.Tkprof
+C.DBMS_PROFILER
+D.Statspack
+
+9. Which of the following is the largest storage unit in oracle
+
+A.Block
+B.extent
+C.Tablespace
+D.segment
+
+10. Which of the following is not a background process
+
+A.Smon
+B.Pmon
+C.sqlplus
+D.Dbwr
+
+11. How do you create an user (Write the syntax)
+
+
+
+12. Which select statement will display the next value parts_id_seq
+    sequence by actually retrieving the value from the sequence
+
+A. Select NEXTVAL (parts_id_seq) from sys.dual;
+B. Select parts_id_seq.NEXTVAL from parts;
+C. Select parts_id_seq.NEXTVAL FROM SYS.dual;
+D. Select parts_id_seq NEXTVAL from inventory;
+
+13. Which tool is used for taking  a logical backup
+
+A. EXplain plan
+B. Export
+C. DBMS_PROFILER
+D. Import
+
+14. Which statement concerning sql functions is true
+
+A. Character functions can return character or number values
+B. Conversion functions convert a column definition from one date type 
+   to another data type
+C. Single row functions can only be used in SELECT AND Where clauses
+D. All data functions return DATE data type values.
+
+15. Which process clears the dead connections
+
+A. Dbwr
+B. Lgwr
+C. clean
+D. Pmon
+
+16. For which two types of constraints will a unique index be 
+   automatically created
+
+A. Unique
+B. Primary key
+C. Not null
+D. Foreign key
+E. Check
+
+17. When do we create bitmap indexes
+
+A.OLTP
+B.DSS
+C.Where clause has functions
+D.Tables that have only one record
+
+
+18. Which of the following is true
+
+A.Lgwr moves data from logbuffer to logfiles
+B.Lgwr moves data from logfiles to logbuffer
+C.Dbwr moves data from logbuffer to logfiles
+D.Lgwr moves data from logbuffer to archivefiles
+
+19. Which of the following is not part of SGA
+
+A.Shared pool
+B.Largepool
+C.Database buffer cache
+D.dispatchers
+
+20. A Table emp has following columns 
+    eno,ename,salary,deptno
+  you execute the below statement
+
+Create index emp_idx on emp (eno,firstname);
+
+Which statement is true
+
+A. Oracle will create  unique index
+B. Oracle throw an error
+C. Oracle will create primary key index
+D. Oracle will create function based index
+
+
+Oracle 9i
+
+1. Which of the following is not part of SGA
+
+A.Shared pool
+B.Largepool
+C.Database buffer cache
+D.dispatchers
+
+2. For which two types of constraints will a unique index be 
+   Automatically created
+
+A. Unique
+B. Primary key
+C. Not null
+D. Foreign key
+E. Check
+
+3. Which statement about a sequence is true
+
+
+A. Creating a sequence causes sequence numbers are stored in a table
+B. One sequence canbe used for multiple tables in the same user schema
+C. A sequence can only be used to create a primary key value
+D. A sequence slows down the performance
+
+
+4. Which three functions can be used to manipulate charcter,number,
+    or date column values (Choose three)
+
+A. CONCAT
+B. ROUND
+C. Trunc
+D. Rpad
+E. Instrb
+
+10. Which of the following process maintains database consistency
+
+A. Consistent
+B. Maintain
+C. DBWR
+D. CKPT
+
+
+6. Which of the following mechanism is used for read consistency in oracle
+
+A.Archive files
+B.Redo
+C.Undo
+D.Temp
+
+7. Which select statement will display the next value parts_id_seq
+    sequence by actually retrieving the value from the sequence
+
+A. Select NEXTVAL (parts_id_seq) from sys.dual;
+B. Select parts_id_seq.NEXTVAL from parts;
+C. Select parts_id_seq.NEXTVAL FROM SYS.dual;
+D. Select parts_id_seq NEXTVAL from inventory;
+
+8. Which statement concerning sql functions is true
+
+A. Character functions can return character or number values
+B. Conversion functions convert a column definition from one date type 
+   to another data type
+C. Single row functions can only be used in SELECT AND Where clauses
+D. All data functions return DATE data type values.
+
+
+9. Which of the following statement is used for creating primary key
+    for a table emp
+
+A. Alter table emp add constraint eno primary key;
+B. Alter table emp add primary key (eno);
+C. Alter table emp modify eno primary key
+
+
+
+10. Which of the following is true
+
+A.Lgwr moves data from logbuffer to logfiles
+B.Lgwr moves data from logfiles to logbuffer
+C.Dbwr moves data from logbuffer to logfiles
+D.Lgwr moves data from logbuffer to archivefiles
+
+11.When do we create bitmap indexes
+
+A.OLTP
+B.DSS
+C.Where clause has functions
+D.Tables that have only one record
+
+12.Which process clears the dead connections
+
+A. Dbwr
+B. Lgwr
+C. clean
+D. Pmon
+
+13. Which tool helps you to identify the path used by oracle
+
+A.Explain plan
+B.Tkprof
+C.DBMS_PROFILER
+D.Statspack
+
+14.How do you create an user (Write the syntax)
+
+
+
+15.Which tool is used for taking a logical backup
+
+A. Explain plan
+B. Export
+C. DBMS_PROFILER
+D. Import
+
+16.A Table emp has following columns 
+    eno,ename,salary,deptno
+  you execute the below statement
+
+Create index emp_idx on emp (eno,firstname);
+
+Which statement is true
+
+A. Oracle will create  unique index
+B. Oracle throw an error
+C. Oracle will create primary key index
+D. Oracle will create function based index
+
+17 .Which four statements about oracle constraints true (Choose four)
+
+A. A unique constraint specifies a column or combination of columns
+   whose values mustbe unique for all rows in a table
+
+B. A check constraint specifies a condition that mustbe true
+
+C. A NOT NULL constraint ensures that all null values are not allowed 
+   in a column
+D. A Primary key constraint uniquely identifies each row of a table
+
+E. A unique constraint allows prohibits the input of nulls because 
+   nulls do not specify the constraint conditions
+
+F. A primary key constraint allows null values in a column when the column
+   is part of a set of column that uniquely identifies each row
+
+
+18 .Which of the following is not a background process
+
+A.Smon
+B.Pmon
+C.sqlplus
+D.Dbwr
+
+19. Which statement types wouldbe used to remove transactions more than one    year old from the table x (any table)
+
+A. TCL
+B. DCL
+C. DML
+D. DRL
+
+
+20.hich of the following is the largest storage unit in oracle
+
+A.Block
+B.extent
+C.Tablespace
+D.segment
+
+
+
+
+
+
