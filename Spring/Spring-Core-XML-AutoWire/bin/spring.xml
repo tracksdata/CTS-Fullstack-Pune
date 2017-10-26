@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.2.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd">
+
+
+	<bean id="emp" name="e1,e2,e3,e4,http://abc.com" class="com.Employee" autowire="byName">
+		<property name="empId" value="1024" />
+		<property name="empName" value="Praveen" />
+		<property name="salary" value="3483" />
+
+	</bean>
+
+
+	<bean id="addr1" class="com.Address">
+		<property name="addrid" value="10" />
+		<property name="address" value="Hyderabad" />
+	</bean>
+
+	<bean id="addr" class="com.Address">
+		<property name="addrid" value="11" />
+		<property name="address" value="Pune" />
+	</bean>
+
+	<bean id="proj" class="com.Project">
+	<property name="projId" value="100"/>
+	<property name="projName" value="Ford"/>
+	
+	</bean>
+
+
+
+
+</beans>
