@@ -92,15 +92,15 @@ public class LoggingAspect {
 	// --------------------------------------------------
 
 	@Around("execution(* *.withdraw2(..))")
-	public void aroundAdvice(ProceedingJoinPoint pjp) throws Throwable {
-
+	public Object aroundAdvice(ProceedingJoinPoint pjp) throws Throwable {
+		Object obj=null;
 		try {
 			// Before
 			System.out.println("Around Advice: Before");
 			String v = "before";
-			pjp.proceed();
+			 obj=pjp.proceed();
 			// After Returning
-			System.out.println("Around Advice: returning");
+			System.out.println("Around Advice: returning "+obj);
 
 		} catch (Throwable e) {
 			// AFter Throwing
@@ -109,7 +109,7 @@ public class LoggingAspect {
 		}
 		// After
 		System.out.println("Around Advice: After");
-
+		return obj;
 	}
 
 }

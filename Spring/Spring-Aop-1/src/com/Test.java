@@ -35,10 +35,10 @@ public class Test {
 
 			//System.out.println("----------");
 
-			 bankSerive.withdraw2(account, "val3");
+			bankSerive.withdraw2(account, "val3");
 
-			//System.out.println();
-			//System.out.println("------------------------------");
+			System.out.println();
+			System.out.println("------------------------------");
 
 			sc.registerShutdownHook();
 
