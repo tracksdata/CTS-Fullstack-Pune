@@ -1,0 +1,25 @@
+
+
+
+ .js-lang
+
+   -> single-threaded lang 
+   -> Non Blocking IO
+
+
+   ------------------------------------------
+
+   browser ==> e,g chrome
+
+   1. Js-Engine
+
+        a. single-call-stack ==> to execute contexts
+        b. heap       ==> to hold objects
+
+   2. Web-API Impln  ==> DOM, XHR , Timer ,etc....
+
+   3. Event/Message/Callback Queue
+
+   4. Event-Loop
+
+   ----------------------------------------------

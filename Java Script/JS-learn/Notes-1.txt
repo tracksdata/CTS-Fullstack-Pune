@@ -1,0 +1,83 @@
+
+
+.js-lang   
+
+   ref : http://crockford.com/
+
+
+   --> scripting lang for web-pages in browser-envi
+   +
+   --> server-side programming lang on Node.js
+   --> Mobile appln dev
+
+
+   Features:
+
+   --> functional / object-oriented programming lang
+   --> datatypes ==> dynamic
+
+   --> closures support ==> async func execution
+
+   --> single-threaded ==> can implement concurreny with Event-Loop support
+   --> Non-Blocking IO
+
+
+   when/where shud use .js-lang?
+
+   ==> Event-Driven appln developement. 
+
+
+   --------------------------------------------------------------
+
+   .js-lang ==> 'ECMAScript' spec
+
+   -------------------------------------------------------------
+
+   How to .js program?
+
+   ==> using 'js-engine'  
+
+   browser-envi
+
+    a. chrome ==> v8(C++)
+    b. firfox ==> rhino(java)
+    c. IE     ==> chakra
+    d. safari ==> nitro
+
+
+   non-browser envi
+
+    a. Node.js ==> v8 
+    b. JVM   ==> nashorn
+    c. MongoDB
+    d. Apache CouchDB
+    e. ...
+
+  ----------------------------------------------------------------
+
+
+    .js- topics
+   ----------------
+
+   1. data-types
+   2. execution-context(s) and context-chaining
+   3. functions - depth
+   4. 'this' keyword
+   5. closures
+   6. Inheritance
+   7. Objects - depth
+   8. ECMAScript-2015 or ES6 - New Features
+   9. concurreny-model
+  10. best-practices
+
+  ---------------------------------------------------------------- 
+
+
+> node -v
+> npm -v
+
+> npm i live-server -g
+
+> live-server --port=8080
+
+---------------------------------------------------------------- 
