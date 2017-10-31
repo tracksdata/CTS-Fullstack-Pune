@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+      
+
+        <link href="./node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <script type="text/javascript">
+
+    function loadColor(color){
+            
+        var sc=color.value; 
+        var path="<img src=./Cars/"+sc+".jpg height=200 width=200>";
+                
+            document.getElementById('car').innerHTML=path;
+        
+
+    }
+
+  function addrType(key){
+    document.getElementById('office').innerHTML=key.value;
+  }
+
+  function validateData(){
+
+      var data=document.getElementById('home').value;
+
+     
+      if(data=="" || data==" " || data.length==0){
+        document.getElementById('homeError').innerHTML="You Must Provide Home Address";
+        return false;
+      }
+      return true;
+  }
+
+    </script>
+    
+    
+    </head>
+    <body class="container">
+    
+    <h2>Welcome to Car Color Selection App<hr/>
+    <div id="car">
+        <img src="./Cars/b_blue.jpg" height="200" width="200">
+    </div>    
+
+    <div>
+        <span><button id="bc" value="b_blue" onmouseover="javascript:loadColor(this)">Blue</button>
+        <span><button id="rc" value="b_red" onmouseover="javascript:loadColor(this)">Red</button>
+        <span><button id="wc" value="b_white" onmouseover="javascript:loadColor(this)">White</button>
+    </div>    
+    
+    <form action="abc.com" onsubmit="return validateData()">
+    
+    <div class="well">
+       <span> <textarea name="home" id="home" onkeyup="javascript:addrType(this)"></textarea></span>
+       <span id="homeError"></span>
+    </div>    
+
+    <div class="well">
+        <textarea name="office" id="office"></textarea>
+    </div>
+
+    <div>
+            <input type="submit" value="Save">
+    </div>
+
+
+    </form>
+
+</html>
