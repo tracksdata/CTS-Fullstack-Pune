@@ -1,0 +1,77 @@
+create database cts;
+use cts;
+
+create table employee(
+id bigint(20),
+ename varchar(255),
+salary double
+);
+
+
+create table leave_details(
+id bigint(20),
+employee_id bigint(20),
+leave_type varchar(255),
+no_of_leaves bigint(20)
+);
+
+create table department(
+id bigint(20),
+dname varchar(255),
+bugget double,
+manageid bigint(20)
+);
+
+create table works(
+employee_id bigint(20),
+department_id bigint(20),
+percent_time bigint(20)
+);
+
+alter table department add primary key(id);
+alter table works add foreign key(employee_id) references employee(id);
+alter table department add foreign key(managerid) references  employee(id);
+
+alter table works add foreign key(department_id) references department(id);
+
+alter table employee add primary key(id);
+alter table leave_details add primary key(id);
+alter table leave_details add foreign key(employee_id) references employee(id);
+
+alter table employee add column desig varchar(155);
+alter table employee modify desig bigint(20);
+alter table employee change desig designation varchar(255);
+alter table employee drop column designation;
+
+insert into employee values(10,'Praveen',1000);
+insert into employee values(11,'James',5000);
+insert into employee values(12,'Divya',9000);
+insert into employee values(13,'Ria',2000);
+insert into employee values(14,'Mia',6000);
+ 
+select * from employee;
+
+insert into leave_details values(1024,10,'Sick',5);
+insert into leave_details values(1025,10,'Casual',2);
+insert into leave_details values(1026,10,'Personal',1);
+insert into leave_details values(1027,11,'Personal',6);
+insert into leave_details values(1028,12,'Sick',10);
+insert into leave_details values(1029,15,'Sick',8);
+
+select e.ename,l.leave_type,l.no_of_leaves from employee e,leave_details l
+where l.employee_id=10 and e.id=10;
+
+select e.ename,l.leave_type,l.no_of_leaves from employee e,leave_details l
+where (l.employee_id=15 and e.ename='Praveen') and e.id=15;
+
+select sum(l.no_of_leaves) as "Leaves Availed" from leave_details l, employee e where (e.ename='Praveen' and l.employee_id=e.id) and e.id=10;
+
+
+
+
+
+
+
+
+
+
