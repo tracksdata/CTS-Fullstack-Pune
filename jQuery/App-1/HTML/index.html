@@ -7,21 +7,48 @@
         <script src="/jquery/jquery.js"></script>
         <script src="/js/one.js"></script>
         <link href="/node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
-   
+        <style>
+            .tickets{
+                display: none;  
+            }
+        </style>
     </head>
     <body class="container">
 
+    <h2>jQuery Application_</h2><hr/>
+   
+   <div class="well" id="filters"> 
+    <button class="btn btn-success onSale-filter">OnSale</button>
+    <button class="btn btn-warning expiring-filter">Expiring</button>
+   </div>
     <div class="row">
         
-    <div class="well col-sm-36 col-md-4"> 
+    <div class="col-sm-36 col-md-4 vacation onSale" data-price="848346"> 
         <h1>Andaman Tour</h1>
+        <hr/>
         <button class="btn btn-primary">Get Price</button>
+        <hr/>
+        
     </div>
 
+     <div class="col-sm-36 col-md-4 vacation expiring" data-price="2334864"> 
+        <h1>Andaman Tour-1</h1>
+        <hr/>
+        <button class="btn btn-primary">Get Price</button>
 
+    </div>
+    
+    <div class="col-sm-36 col-md-4 vacation onSale" data-price="84834668"> 
+        <h1>Andaman Tour-2</h1>
+        <hr/>
+        <button class="btn btn-primary">Get Price</button>
 
-    </div>  
+    </div>
+</div>
 
+<hr/>
+
+  
 
 
     </body>
