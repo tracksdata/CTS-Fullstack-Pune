@@ -3,15 +3,23 @@ $(document).ready(function(){
 
 $('.vacation').on('click','button',function(){  
  
-var price=$('<p> From 84683 </p>');
  
 var vacation=$(this).closest('.vacation');
 
 var amount=vacation.data('price');
-var price=$(`<p> &#8377; ${amount} </p>`);
+var price=$(`
+             <p> &#8377; ${amount} per Ticket </p>
+                <p>
+                Tickets:
+                <input type='number' class='quantity form-control' value='1' />
+                </p>
+                <p>Total Price: <span id='total'>&#8377; ${amount}</span></p>
+
+                `);
 
 //price.appendTo('.vacation');
 price.appendTo(vacation);
+//$(this).before(price);
 $(this).remove();
 
 })
@@ -29,8 +37,10 @@ $('#filters').on('click','.expiring-filter',function(){
 })
 
 
-$('.confirmation').on('click','button',function(){
-    $(this).closest('.confirmation').find('.tickets').slideToggle();
+$('.vacation').on('keyup change','.quantity',function(){
+    var price = $(this).closest('.vacation').data('price');
+    var quantity=+$(this).val();
+    $('#total').text(quantity*price); 
 })
 
 
