@@ -1,8 +1,24 @@
 <!--The content below is only a placeholder and can be replaced.-->
+
 <div style="text-align:center">
+
   <h1>
-    Welcome to Angular2 {{title}}!
+    Welcome to {{title}}!
   </h1>
-  <h2>Name: {{personName}} </h2>
-</div>  
- 
+  <button (click)="myFun()">Click Me</button>
+   <br/><input type="text" #s1 (keyup)="abc(s1.value)">  {{name}} 
+   <br/><input type="text" #s2 (keyup.enter)="values=s2.value"> {{values}}    
+   <br/>
+
+   <button [style.color]="isChanged? 'yellow':'blue'">Click</button>
+
+  <h1>{{emp}}</h1>
+</div>
+
+<div>
+  <app-emp> Loading  </app-emp>
+</div>
+
+<div>
+  <app-bank> Loading </app-bank>
+</div>

@@ -7,5 +7,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-  personName='Praveen';
+  name='';
+  values='Pune City';
+  
+  isChanged=true;
+ 
+ 
+  myFun(){
+    alert('Its Working');
+  }
+  
+  abc(s1:string){
+    //console.log('Name is '+s1);
+    this.name='';
+    this.name+=s1;
+}
+
 }
