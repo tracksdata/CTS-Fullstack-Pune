@@ -24,3 +24,10 @@ export class AppComponent {
 }
 
 }
+
+interface Abc{
+
+}
+class Test{
+  
+}

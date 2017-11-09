@@ -1,0 +1,12 @@
+
+<ul>
+  <li *ngFor="let emp of emps">
+      <span (click)="onSelect(emp)"> {{emp.empId}} - {{emp.empName}} </span>
+  </li> 
+
+</ul>  
+
+<hr/>
+
+<input type="text" value="{{selected.empName}}"  >
+

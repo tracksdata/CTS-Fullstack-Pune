@@ -1,21 +1,23 @@
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
+
 import { AppComponent } from './app.component';
 import { EmpComponent } from './emp/emp.component';
-import { BankComponent } from './bank/bank.component';
 import { HeroesComponent } from './heroes/heroes.component';
-import {FormsModule} from '@angular/forms';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     EmpComponent,
-    BankComponent,
-    HeroesComponent,
+    HeroesComponent
   ],
   imports: [
     BrowserModule,
-     FormsModule
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

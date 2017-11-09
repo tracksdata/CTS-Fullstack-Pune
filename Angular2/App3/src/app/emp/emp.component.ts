@@ -1,6 +1,8 @@
 import { EMPLOYEES } from './../mock-employees';
+import { Employee } from './../emp';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Employee } from '../emp';
+
+
 @Component({
   selector: 'app-emp',
   templateUrl: './emp.component.html',
@@ -8,12 +10,23 @@ import { Employee } from '../emp';
   encapsulation: ViewEncapsulation.None
 })
 export class EmpComponent implements OnInit {
-emps=EMPLOYEES;
-selectedEmp=Employee;
 
-  constructor() { }
+  emps=EMPLOYEES;
+  selected:Employee;
+  onSelect(emp:Employee){
+    this.selected=emp;
+    
+  }
 
+  emp1=new Employee();
+  
+  constructor(){
+   this.emp1.empId=1024;
+
+  }
+ 
   ngOnInit() {
+   
   }
 
 }

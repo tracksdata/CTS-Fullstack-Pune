@@ -1,3 +1,7 @@
-<p>
-  emp works!
-</p>
+<h1> Employees List</h1>
+<ul>
+  <li *ngFor="let emp of emps">
+    <span> {{emp.empId}} - {{emp.empName}}</span>
+
+  </li>
+</ul>  
