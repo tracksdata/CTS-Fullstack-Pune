@@ -1,3 +1,20 @@
+<select #s2 (change)="onSelect1(s2.value)">
+  <option>-- Select Course --</option>
+  <option>BSC</option>
+  <option>MSC</option>
+</select> <br/>
+Sub Course: <select >
+            <option *ngFor="let sb of subCourses"> {{sb}} </option>
+             </select>
+
+<h2>Couse: {{course}}<br/> 
+<input type="text" [(ngModel)]="name">
+<h2>You have entered: {{name}}
+<div *ngIf="showData">
+  <h1>Hello</h1>
+</div>
+<h2>Data: {{showData}}</h2>
+<h3><input type="checkbox" #s1 [(ngModel)]="showData">Show Data</h3>
 <h2>My Heroes</h2>
 <ul class="heroes">
   <li *ngFor="let hero of heroes"
@@ -15,7 +32,11 @@
   <div>
     <label>name:
       <input [(ngModel)]="selectedHero.name" placeholder="name">
+       <input [(ngModel)]="selectedHero.id" placeholder="id">
     </label>
   </div>
  
 </div>
+
+
+
